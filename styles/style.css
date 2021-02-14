@@ -44,6 +44,11 @@ body{
 .active{
     background-color: white;
 }
+.breadscrumbs{
+    background-color: #332f28;
+    /* width: 100%; */
+    padding-right: 30px;
+}
 /* header */
 #branding{
     padding: 15px;
@@ -119,6 +124,9 @@ nav ul li a div{
 .bg{
     padding: 15px 15px 0 0;
 }
+.center{
+    padding: 0 0 0 15px;
+}
 
 /* ONLY */
 .only{
@@ -193,10 +201,13 @@ nav ul li a div{
 .welcome a,i,p{
     color: white;
 }
+.welcome div>div{
+    margin-top: -10px;
+}
 .welcome div>div:hover i{
     color: black;
 }
-.welcome div>div:hover a{
+.welcome div>div:hover>a{
     color: black;
 }
 .welcome .btn_1{
@@ -220,4 +231,49 @@ nav ul li a div{
     font-weight: bold;
     color: #fff;
     font-size: 50px;
+}
+.coach{
+    margin-top: 40px;
+}
+.coach h3{
+    font-weight: bold;
+    font-size: 40px;
+}
+.coach img{
+    border: 4px solid var(--theme);
+}
+.coach h5{
+    color: orange;
+    font-size: 20px;
+}
+.coach p {
+    color: black;
+}
+.coach i,.coach a{
+    color: orange;
+}
+/* footer */
+footer{
+    background-color:#403c32 ;
+    border-top: 4px solid orange;
+    margin-top: 100px;
+}
+footer h3{
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 30px;
+}
+footer p{
+    font-size: 15px;
+}
+footer p>a{
+    color: orange;
+}
+footer section:nth-of-type(2)>article>a{
+    color: white;
+}
+footer section:nth-of-type(2)>article>a>i{
+    color: orange;
+    padding: 10px;
 }
