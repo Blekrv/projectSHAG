@@ -1,0 +1,223 @@
+:root {
+    --theme: #88a05c;
+  }
+/* Fonts */
+@font-face {
+    font-family: "RubikBold";
+    src: url("../fonts/Rubik-Bold.woff") format("woff");
+}
+@font-face {
+    font-family: "RubikMedium";
+    src: url("../fonts/Rubik-Medium.woff") format("woff");
+}
+@font-face {
+    font-family: "RubikLight";
+    src: url("../fonts/Rubik-Light.woff") format("woff");
+}
+@font-face {
+    font-family: "RubikRegular";
+    src: url("../fonts/Rubik-Regular.woff") format("woff");
+}
+/* Utility */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a,a:hover{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+ul{
+    list-style-type: none;
+    list-style-position: inside;
+}
+body{
+    background-color: khaki;
+    background-image: url(../images/bg.jpg);
+    font-family: "RubikRegular";
+}
+.active{
+    background-color: white;
+}
+/* header */
+#branding{
+    padding: 15px;
+}
+header h1{
+    font-size: 80pt;
+    font-weight: bold;
+}
+header p{
+    font-size: 15pt;
+    color: rgb(90, 90, 90);
+}
+/* nav */
+nav{
+   position: sticky;
+   top: 0; 
+   z-index: 9999;
+}
+nav ul li{
+    width: 100%;
+    background-color: var(--theme);
+    border-top: 5px solid black;
+    border-right: 1px solid gray;
+
+}
+@keyframes navA{
+    0%{
+        background-color: #88a05c;
+    }
+    100%{
+        background-color: white;
+    }
+    0%{
+        background-color: #88a05c;
+    }
+}
+nav ul li:hover{
+    animation-name: navA;
+    animation-duration: 1s;
+    animation-play-state: running;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+nav ul li:last-of-type{
+    border-right: none;
+}
+nav ul li h5{
+    color: orange;
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+nav ul li i{
+    font-size: 30px;
+    color: black;
+}
+nav ul li a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+nav ul li a div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    height: 150px;
+}
+/* main */
+.bg{
+    padding: 15px 15px 0 0;
+}
+
+/* ONLY */
+.only{
+    padding: 0 0 0 15px;
+    box-shadow: 4px 0 0 0 rgba(66, 66, 66, 0.623);
+    z-index: 999;
+    
+}
+.only article:nth-of-type(1){
+    background-image: url(../images/main_ball.jpg);
+    background-size: cover;
+    height: 410px;
+    border-bottom: 5px solid orange;
+    color: white;
+    position: relative;
+}
+.only article:nth-of-type(1) div{
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    
+}
+.only article:nth-of-type(1) h1{
+    font-size: 100px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.only article:nth-of-type(1) h2{
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.only article:nth-of-type(2){
+    padding: 20px;
+    flex-direction: row;
+    align-items: center;
+    background-color: #5e7045;
+}
+.only article:nth-of-type(2) img{
+    border: 4px solid var(--theme);
+}
+.only article:nth-of-type(2) div{
+    padding: 20px;
+}
+.only article:nth-of-type(2) h5{
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.only article:nth-of-type(2) p{
+    font-size: 15px;
+    color: #fff;
+}
+.welcome{
+    background-color: #5e7045;
+    padding: 0 15px 0 15px;
+    border-top: 5px solid orange;
+    position: relative;
+}
+.welcome h5{
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.welcome img{
+    border: 4px solid var(--theme);
+    margin-bottom: 20px;
+}
+
+.welcome a,i,p{
+    color: white;
+}
+.welcome div>div:hover i{
+    color: black;
+}
+.welcome div>div:hover a{
+    color: black;
+}
+.welcome .btn_1{
+    width: 373px;
+    height: 200px;
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 9998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 2s;
+}
+.welcome .btn_1:hover{
+    transition-duration: 2s;
+    background-color: black;
+}
+.welcome .btn_1 h3{
+    font-weight: bold;
+    color: #fff;
+    font-size: 50px;
+}
