@@ -46,13 +46,40 @@ body{
 }
 .breadscrumbs{
     background-color: #332f28;
-    /* width: 100%; */
-    padding-right: 30px;
+    color: #fff;
+    margin-bottom: 60px;
 }
+.breadscrumbs a{
+    color: orange;
+    padding: 0 15px;
+    
+}
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    padding-left: 0;
+    padding-right: 0;
+}
+.heading h2{
+    color: orange;
+    font-weight: bold;
+    font-size: 40px;
+}
+.lists{
+    list-style-type: none;
+    color: black;
+}
+.lists li{
+    padding-left: 1.3em;
+}
+.lists li::before{
+    content: "\f058";
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    font-weight: bold;
+    color: orange;
+    margin-left: -1.3em;
+    width: 1.3em;
+  }
 /* header */
-#branding{
-    padding: 15px;
-}
 header h1{
     font-size: 80pt;
     font-weight: bold;
@@ -121,19 +148,96 @@ nav ul li a div{
     height: 150px;
 }
 /* main */
-.bg{
-    padding: 15px 15px 0 0;
+/* blog */
+.blog>.row>section>article>figure>img{
+    height: 404px;
+    width: 800px;
+    border: 4px solid var(--theme);
+    margin:10px 0;
 }
-.center{
-    padding: 0 0 0 15px;
+.blog>.row>section>article>figcaption>p{
+    color: #403c32;
+    padding-right: 40px;
 }
-
+.blog>.row>section>article h3{
+    font-weight: bold;
+}
+.blog>.row>section>article>div>figure>img{
+    height: 80px;
+    width: 80px;
+    border: 4px solid var(--theme);
+    margin:10px 0;
+}
+.blog>.row>section>article>div>figcaption h5{
+    color: orange;
+}
+.blog>.row>section>article>div>figcaption p{
+    color: #403c32;
+}
+.blog>.row>section>article>div{
+    color: orange;
+    margin-bottom: 30px;
+}
+.blog i{
+    color: orange;
+}
+/* contacts */
+.cont{
+    margin-top: 30px;
+}
+.cont h2{
+    font-weight: bold;
+    font-size: 40px;
+}
+.cont p{
+    font-size: 20px;
+    color: #403c32;
+}
+.cont input{
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.cont label{
+    font-size: 20px;
+}
+.cont button{
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: var(--theme);
+}
+/* training */
+.training .what h2{
+    font-weight: bold;
+    font-size: 40px;
+}
+.what h5{
+    color: orange;
+    font-weight: bold;
+}
+.what article:nth-of-type(1) img{
+    height: 273px;
+    width: 243px;
+    border: 4px solid var(--theme);
+}
+.what article:nth-of-type(1) figcaption{
+    padding:0 10px;
+}
+.what article:nth-of-type(1) p{
+    color: #403c32;
+}
+.what p{
+    color: #403c32;
+}
+.goal div>figure>img{
+    width: 340px;
+    height: 150px;
+    border: 4px solid var(--theme);
+}
 /* ONLY */
 .only{
-    padding: 0 0 0 15px;
     box-shadow: 4px 0 0 0 rgba(66, 66, 66, 0.623);
     z-index: 999;
-    
 }
 .only article:nth-of-type(1){
     background-image: url(../images/main_ball.jpg);
@@ -196,6 +300,8 @@ nav ul li a div{
 .welcome img{
     border: 4px solid var(--theme);
     margin-bottom: 20px;
+    width: 100%;
+    height: 186px;
 }
 
 .welcome a,i,p{
@@ -210,8 +316,14 @@ nav ul li a div{
 .welcome div>div:hover>a{
     color: black;
 }
+.position{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 9998;
+}
 .welcome .btn_1{
-    width: 373px;
+    width: 379px;
     height: 200px;
     background-color: orange;
     position: absolute;
@@ -221,6 +333,7 @@ nav ul li a div{
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
     transition-duration: 2s;
 }
 .welcome .btn_1:hover{
@@ -267,7 +380,7 @@ footer h3{
 footer p{
     font-size: 15px;
 }
-footer p>a{
+footer a{
     color: orange;
 }
 footer section:nth-of-type(2)>article>a{
@@ -276,4 +389,93 @@ footer section:nth-of-type(2)>article>a{
 footer section:nth-of-type(2)>article>a>i{
     color: orange;
     padding: 10px;
+}
+@media  screen and (max-width:1200px){
+    .welcome .btn_1{
+        width: 320px;
+    }
+    .coach h3{
+        font-size: 30px;
+    }
+    .goal div>figure>img{
+        width: 300px;
+        height: 150px;
+        border: 4px solid var(--theme);
+    }
+    .blog>.row>section>article>figure>img{
+        height: 354px;
+        width: 680px;
+        border: 4px solid var(--theme);
+        margin:10px 0;
+    }
+}
+@media  screen and (max-width:992px){
+    .welcome .btn_1{
+        width: 240px;
+    }
+    .welcome .btn_1 h3{
+        font-size: 30px;
+    }
+    .coach h3{
+        font-size: 20px;
+    }
+    .goal div>figure>img{
+        width: 400px;
+        height: 200px;
+        border: 4px solid var(--theme);
+    }
+    .blog>.row>section>article>figure>img{
+        height: 404px;
+        width: 100%;
+        border: 4px solid var(--theme);
+        margin:10px 0;
+    }
+}
+@media  screen and (max-width:768px){
+    footer h3{
+        font-size: 25px;
+    }
+    
+    .only{
+        box-shadow: none;
+    }
+    .position{
+        bottom: -200px;
+    }
+    .welcome img{
+        height: 300px;
+    }
+    .welcome .btn_1{
+        height: 200px;
+        width: 540px;
+    }
+    .welcome .btn_1 h3{
+
+        font-size: 50px;
+    }
+    .coach{
+        margin-top: 240px;
+    }
+    .coach h3{
+        font-size: 40px;
+        margin-top: 30px;
+    }
+    .blog>.row>section>article>figure>img{
+        height: 350px;
+        width: 100%;
+        border: 4px solid var(--theme);
+        margin:10px 0;
+    }
+}
+@media  screen and (max-width:576px){
+    .welcome .btn_1{
+        height: 200px;
+        width: 560px;
+    }
+    .blog>.row>section>article>figure>img{
+        height: 300px;
+        width: 100%;
+        border: 4px solid var(--theme);
+        margin:10px 0;
+    }
 }
